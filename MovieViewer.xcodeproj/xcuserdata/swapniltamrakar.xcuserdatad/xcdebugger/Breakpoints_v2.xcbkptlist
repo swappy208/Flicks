@@ -20,16 +20,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MovieViewer.MoviesViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MovieViewer.MoviesViewController"
+                  symbolName = "MovieViewer.MoviesViewController.__deallocating_deinit"
                   moduleName = "MovieViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592864.58561"
+                  timestampString = "508027650.440665"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "70">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -39,7 +39,7 @@
                   moduleName = "MovieViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592864.59487"
+                  timestampString = "508027650.451384"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -54,7 +54,7 @@
                   moduleName = "MovieViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592864.602507"
+                  timestampString = "508027650.456628"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -69,12 +69,12 @@
                   moduleName = "MovieViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592864.608184"
+                  timestampString = "508027650.461755"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
          </BreakpointContent>

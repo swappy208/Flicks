@@ -10,44 +10,14 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieViewer/MoviesViewController.swift"
-            timestampString = "507592886.303934"
+            timestampString = "507787807.1001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
             landmarkName = "MoviesViewController"
             landmarkType = "3">
             <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieViewer.MoviesViewController.tableView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
-                  moduleName = "MovieViewer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592886.313563"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MovieViewer.MoviesViewController.tableView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
-                  moduleName = "MovieViewer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592886.32061"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "42">
-               </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -56,7 +26,7 @@
                   moduleName = "MovieViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592886.327185"
+                  timestampString = "508027650.409415"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -67,18 +37,64 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "MovieViewer.MoviesViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MovieViewer.MoviesViewController"
+                  moduleName = "MovieViewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
+                  timestampString = "508027650.415704"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieViewer.MoviesViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MovieViewer.MoviesViewController&gt;"
+                  moduleName = "MovieViewer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
+                  timestampString = "508027650.42163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
                   symbolName = "MovieViewer.MoviesViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MovieViewer.MoviesViewController&gt;"
                   moduleName = "MovieViewer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swapniltamrakar/Desktop/MovieViewer/MovieViewer/MoviesViewController.swift"
-                  timestampString = "507592886.332801"
+                  timestampString = "508027650.427371"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieViewer/MoviesViewController.swift"
+            timestampString = "508027205.07837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

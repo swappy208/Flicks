@@ -10,12 +10,15 @@ import UIKit
 import AFNetworking
 import MBProgressHUD
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var movies : [NSDictionary]?
+    var filteredData: [NSDictionary]?
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        searchBar.delegate = self
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
@@ -34,6 +37,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 if let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                     print("response: \(dataDictionary)")
                     self.movies = dataDictionary["results"] as? [NSDictionary]
+                    self.filteredData = self.movies
                     self.tableView.reloadData()
                 }
             }
@@ -48,8 +52,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if let movies = movies {
-            return movies.count
+        if let filteredData = filteredData {
+            return filteredData.count
         }
         else{
             return 0
@@ -59,7 +63,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        let movie = movies![indexPath.row]
+        let movie = filteredData![indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
         let baseUrl = "https://image.tmdb.org/t/p/w500/"
@@ -88,6 +92,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 if let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
                     print("response: \(dataDictionary)")
                     self.movies = dataDictionary["results"] as? [NSDictionary]
+                    self.filteredData = self.movies
                     self.tableView.reloadData()
                 }
             }
@@ -99,6 +104,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         }
 
         task.resume()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // When there is no text, filteredData is the same as the original data
+        // When user has entered text into the search box
+        // Use the filter method to iterate over all items in the data array
+        // For each item, return true if the item should be included and false if the
+        // item should NOT be included
+        filteredData = searchText.isEmpty ? movies : movies?.filter({(movie: NSDictionary) -> Bool in
+            // If dataItem matches the searchText, return true to include it
+            let myString = movie["title"] as? String
+            return myString?.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
+        tableView.reloadData()
     }
     /*
     // MARK: - Navigation
