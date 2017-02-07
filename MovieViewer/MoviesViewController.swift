@@ -11,6 +11,7 @@ import AFNetworking
 import MBProgressHUD
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    @IBOutlet weak var NetworkError: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var movies : [NSDictionary]?
@@ -24,6 +25,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         tableView.delegate = self
+        NetworkError.isHidden = true
         
         // Do any additional setup after loading the view.
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
@@ -40,6 +42,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                     self.filteredData = self.movies
                     self.tableView.reloadData()
                 }
+            }else
+            {
+                self.NetworkError.isHidden = false
             }
         }
         task.resume()
