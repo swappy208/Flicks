@@ -13,8 +13,10 @@ import MBProgressHUD
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     @IBOutlet weak var MovieLabel: UILabel!
     @IBOutlet weak var NetworkError: UIView!
+    @IBOutlet weak var NetworkErrorLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
     var movies : [NSDictionary]?
     var filteredData: [NSDictionary]?
     var endpoint: String!
@@ -22,7 +24,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        NetworkError.isHidden = true
+        NetworkError.isHidden = false
         searchBar.delegate = self
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
@@ -32,7 +34,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         // Do any additional setup after loading the view.
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = URL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")
+        let url = URL(string: "https://api.themoviedb.org/3/movie/\(endpoint!)?api_key=\(apiKey)")
         let request = URLRequest(url: url!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -47,7 +49,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 }
             }else
             {
-                self.NetworkError.isHidden = false
+                self.NetworkErrorLabel.text = "Network Error!"
             }
         }
         task.resume()

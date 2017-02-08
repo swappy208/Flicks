@@ -9,6 +9,7 @@
 import UIKit
 
 class MovieCell: UITableViewCell {
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
 
     @IBOutlet weak var overviewLabel: UILabel!
@@ -20,8 +21,9 @@ class MovieCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
+    
+    
 
 }

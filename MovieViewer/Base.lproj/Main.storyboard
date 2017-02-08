@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Flicks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,11 +27,11 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="119" id="iNL-5K-hpF" customClass="MovieCell" customModule="MovieViewer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="119" id="iNL-5K-hpF" customClass="MovieCell" customModule="MovieViewer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="360" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iNL-5K-hpF" id="VFK-D3-ZaC">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DEW-zw-n5F">
@@ -55,6 +55,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellView" destination="VFK-D3-ZaC" id="NLI-da-JOA"/>
+                                            <outlet property="contentView" destination="VFK-D3-ZaC" id="Ph2-8R-cCd"/>
                                             <outlet property="overviewLabel" destination="DEW-zw-n5F" id="knQ-MU-MJL"/>
                                             <outlet property="posterView" destination="jRJ-6q-EaR" id="KD4-Em-YNK"/>
                                             <outlet property="titleLabel" destination="OBf-N6-Vp1" id="aig-HV-MeM"/>
@@ -67,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="68" width="367" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Network Error!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="juQ-Y7-rwK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="juQ-Y7-rwK">
                                         <rect key="frame" x="62" y="8" width="242" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -80,10 +82,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="1WU-xS-JvL"/>
+                    <navigationItem key="navigationItem" title="Flicks" id="1WU-xS-JvL"/>
                     <connections>
                         <outlet property="MovieLabel" destination="juQ-Y7-rwK" id="Dzj-Ex-EDF"/>
                         <outlet property="NetworkError" destination="Zx9-B8-Kkr" id="H2Y-y5-GTM"/>
+                        <outlet property="NetworkErrorLabel" destination="juQ-Y7-rwK" id="scb-mZ-KKg"/>
                         <outlet property="searchBar" destination="1ui-pg-Ckd" id="zaH-Gt-7qH"/>
                         <outlet property="tableView" destination="bit-ca-Hvb" id="3j8-kU-okG"/>
                     </connections>
