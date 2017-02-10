@@ -73,6 +73,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        cell.selectedBackgroundView?.backgroundColor = UIColor.blue
         let movie = filteredData![indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
@@ -85,11 +86,13 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        cell.selectionStyle = .none
         
         print("row\(indexPath.row)")
         return cell
         
     }
+    
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         
         // Do any additional setup after loading the view.
@@ -134,6 +137,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)
+        cell.selectedBackgroundView?.backgroundColor = UIColor.blue
         let movie = movies![(indexPath?.row)!]
         let detailViewController = segue.destination as! DetailViewController
         detailViewController.movie = movie
