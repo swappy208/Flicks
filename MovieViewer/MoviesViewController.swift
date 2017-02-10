@@ -86,7 +86,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
-        cell.selectionStyle = .blue
+        cell.selectionStyle = .none
         
         print("row\(indexPath.row)")
         return cell
