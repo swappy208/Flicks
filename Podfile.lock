@@ -14,16 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Cosmos (8.0.2)
   - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - Cosmos (~> 8.0)
   - MBProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: 2036ccd85e244f77edc6a2c34a1ccf3dc16a53db
+PODFILE CHECKSUM: 8c266bfda8574d3eab2bf7d51ddb81ca593e8d32
 
 COCOAPODS: 1.2.0

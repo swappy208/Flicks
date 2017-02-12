@@ -88,6 +88,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.overviewLabel.text = overview
         cell.selectionStyle = .none
         
+        let vote = (movie["vote_average"] as! Float) / 2
+        
+        cell.cosmosView.rating = Double(vote)
+        cell.cosmosView.text = String(vote)+"/5"
+        // Do not change rating when touched
+        // Use if you need just to show the stars without getting user's input
+        cell.cosmosView.settings.updateOnTouch = false
+        
+        // Show only fully filled stars
+        cell.cosmosView.settings.fillMode = .precise
         print("row\(indexPath.row)")
         return cell
         

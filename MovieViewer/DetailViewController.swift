@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Cosmos
 
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var cosmosView: CosmosView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var infoView: UIView!
     
@@ -69,6 +71,16 @@ class DetailViewController: UIViewController {
                     // possibly try to get the large image
             })
         }
+        let vote = (movie["vote_average"] as! Float) / 2
+        
+        cosmosView.rating = Double(vote)
+        cosmosView.text = String(vote)+"/5"
+        // Do not change rating when touched
+        // Use if you need just to show the stars without getting user's input
+        cosmosView.settings.updateOnTouch = false
+        
+        // Show only fully filled stars
+        cosmosView.settings.fillMode = .precise
         
         // Do any additional setup after loading the view.
     }

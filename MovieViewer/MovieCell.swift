@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Cosmos
 
 class MovieCell: UITableViewCell {
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
 
+    @IBOutlet var cosmosView: CosmosView!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     override func awakeFromNib() {
